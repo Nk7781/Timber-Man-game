@@ -181,6 +181,8 @@ int main()
 	float timeRemaining = 6.0f;
 	float timeBarWidthPerSecond = timeBarStartWidth / timeRemaining;
 
+	float difficultyMultiplier = 1.0f;
+
 	bool paused = true;
 
 	Clock clock;
@@ -227,6 +229,7 @@ int main()
 		if (!paused)
 		{
 			dt = clock.restart();
+			difficultyMultiplier = 1.0f + (score * 0.02f);
 			timeRemaining -= dt.asSeconds();
 
 			timeBar.setSize(
@@ -261,13 +264,12 @@ int main()
 				if (playerSide == Side::LEFT)
 				{
 					spriteRIP.setPosition(580, 720);
-					death.play();
 				}
 				else if (playerSide == Side::RIGHT)
 				{
 					spriteRIP.setPosition(1200, 720);
-					death.play();
 				}
+				death.play();
 				messageText.setString("SQUISHED!!!");
 
 				FloatRect textRect = messageText.getLocalBounds();
@@ -280,7 +282,7 @@ int main()
 			if (!beeActive)
 			{
 				srand((int)time(0));
-				beeSpeed = (rand() % 200) + 200;
+				beeSpeed = ((rand() % 200) + 200) * difficultyMultiplier;
 
 				float height = (rand() % 500) + 500;
 
@@ -297,7 +299,7 @@ int main()
 
 			if (!cloudActive1)
 			{
-				cloudSpeed1 = rand() % 200;
+				cloudSpeed1 = (rand() % 200) * difficultyMultiplier;
 				float height = rand() % 150;
 				spriteCloud1.setPosition(-200, height);
 				cloudActive1 = true;
@@ -311,7 +313,7 @@ int main()
 
 			if (!cloudActive2)
 			{
-				cloudSpeed2 = rand() % 200;
+				cloudSpeed2 = (rand() % 200) * difficultyMultiplier;
 				float height = (rand() % 300) - 150;
 				spriteCloud2.setPosition(-200, height);
 				cloudActive2 = true;
@@ -325,7 +327,7 @@ int main()
 
 			if (!cloudActive3)
 			{
-				cloudSpeed3 = rand() % 200;
+				cloudSpeed3 = (rand() % 200) * difficultyMultiplier;
 				float height = rand() % 450 - 150;
 				spriteCloud3.setPosition(-200, height);
 				spriteCloud3.setScale(0.5f, 0.5f);
@@ -347,7 +349,7 @@ int main()
 					spriteAxe.setPosition(AXE_POSITION_LEFT, 830);
 
 					score += 1;
-					timeRemaining += (2 / score) + .15;
+					timeRemaining += 0.4f / difficultyMultiplier;
 
 					spriteLog.setPosition(810, 720);
 					logSpeedX = 5000;
@@ -364,7 +366,7 @@ int main()
 					spriteAxe.setPosition(AXE_POSITION_RIGHT, 830);
 
 					score++;
-					timeRemaining += (2 / score) + .15;
+					timeRemaining += 0.4f / difficultyMultiplier;
 
 					spriteLog.setPosition(810, 720);
 					logSpeedX = -5000;
