@@ -83,16 +83,16 @@ g++ TimberMan.cpp -o TimberMan.exe -lsfml-graphics -lsfml-window -lsfml-system -
 ## Screenshots
 
 ### Start Screen
-![Start Screen](assets/Screenshots/Start.png)
+![Start Screen](Assets/Screenshots/Start.png)
 
 ### Gameplay
-![Gameplay](assets/Screenshots/GamePlay.png)
+![Gameplay](Assets/Screenshots/GamePlay.png)
 
 ### Game Over (Squished)
-![Game Over Squished](assets/Screenshots/GameOver.png)
+![Game Over Squished](Assets/Screenshots/GameOver.png)
 
 ### Game Over (Out of Time)
-![Game Over Time](assets/Screenshots/OutOfTime.png)
+![Game Over Time](Assets/Screenshots/OutOfTime.png)
 ---
 
 ## Author
