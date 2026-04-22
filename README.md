@@ -63,13 +63,13 @@ TimberMan/
 ### Compile
 
 ```
-g++ main.cpp -o timberman -lsfml-graphics -lsfml-window -lsfml-system
+g++ TimberMan.cpp -o TimberMan.exe -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 ```
 
 ### Run
 
 ```
-./timberman
+./TimberMan.exe
 ```
 
 ---
