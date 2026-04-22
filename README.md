@@ -85,11 +85,10 @@ g++ TimberMan.cpp -o TimberMan.exe -lsfml-graphics -lsfml-window -lsfml-system -
 ### Start Screen
 ![Start Screen](Assets/Screenshots/Start.png)
 
-### Gameplay
-![Gameplay](Assets/Screenshots/GamePlay.png)
+
 
 ### Game Over (Squished)
-![Game Over Squished](Assets/Screenshots/GameOver.png
+![Game Over Squished](Assets/Screenshots/GameOver.png)
 
 ### Game Over (Out of Time)
 ![Game Over Time](Assets/Screenshots/OutOfTime.png)
