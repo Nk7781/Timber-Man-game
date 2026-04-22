@@ -79,6 +79,19 @@ g++ main.cpp -o timberman -lsfml-graphics -lsfml-window -lsfml-system
 * On Windows, required SFML DLL files must be present in the executable directory.
 * Make sure assets (fonts, textures) are correctly loaded at runtime.
 
+## Screenshots
+
+### Start Screen
+![Start Screen](assets/Screenshots/Start.png)
+
+### Gameplay
+![Gameplay](assets/Screenshots/GamePlay.png)
+
+### Game Over (Squished)
+![Game Over Squished](assets/Screenshots/GameOver.png)
+
+### Game Over (Out of Time)
+![Game Over Time](assets/Screenshots/OutOfTime.png)
 ---
 
 ## Author
@@ -87,6 +100,3 @@ Neelakantha Sahu
 
 ---
 
-## License
-
-This project is intended for educational use.
