@@ -1,4 +1,4 @@
-# TimberMan Clone (SFML)
+# TimberMan Game
 
 A simple arcade game inspired by Timberman, developed using C++ and SFML. The player chops a tree while avoiding branches. The objective is to survive as long as possible and achieve the highest score.
 
@@ -46,7 +46,8 @@ TimberMan/
 │── assets/
 │   ├── textures/
 │   ├── fonts/
-│   └── sounds/
+│   ├── sounds/
+|   └── Screenshots/
 │── README.md
 ```
 
